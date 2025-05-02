@@ -12,13 +12,14 @@
             margin: 0;
             padding: 0;
             color: #333;
-            line-height: 1.5;
+            line-height: 1.4;
             background-color: #f9f9f9;
+            font-size: 14px;
         }
         
         .resume-container {
             max-width: 8.5in;
-            margin: 20px auto;
+            margin: 10px auto;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             background-color: white;
         }
@@ -26,22 +27,22 @@
         .header {
             background-color: #2a5674;
             color: white;
-            padding: 25px 30px;
+            padding: 15px 25px;
             display: flex;
             align-items: center;
         }
         
         .profile-img-container {
-            margin-right: 25px;
+            margin-right: 20px;
         }
         
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            border: 4px solid white;
+            border: 3px solid white;
             object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
         }
         
         .header-info {
@@ -49,14 +50,14 @@
         }
         
         .name {
-            font-size: 28px;
-            margin: 0 0 5px 0;
+            font-size: 24px;
+            margin: 0 0 3px 0;
             font-weight: 600;
         }
         
         .title {
-            font-size: 18px;
-            margin: 0 0 15px 0;
+            font-size: 16px;
+            margin: 0 0 10px 0;
             font-weight: 300;
             letter-spacing: 1px;
         }
@@ -64,8 +65,8 @@
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
-            font-size: 14px;
+            gap: 12px;
+            font-size: 13px;
         }
         
         .contact-item {
@@ -81,35 +82,36 @@
         }
         
         .contact-item i {
-            margin-right: 6px;
-            font-size: 16px;
+            margin-right: 5px;
+            font-size: 14px;
         }
         
         .main-content {
-            padding: 25px 30px;
+            padding: 15px 25px;
         }
         
         .summary {
-            margin-bottom: 25px;
-            line-height: 1.6;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            font-size: 13px;
         }
         
         .grid-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            grid-template-columns: 60% 40%;
+            gap: 20px;
         }
         
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
         
         .section-header {
             border-bottom: 2px solid #2a5674;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
             color: #2a5674;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
         }
         
@@ -121,8 +123,9 @@
         
         .content-list li {
             position: relative;
-            padding-left: 15px;
-            margin-bottom: 8px;
+            padding-left: 12px;
+            margin-bottom: 6px;
+            font-size: 13px;
         }
         
         .content-list li::before {
@@ -140,33 +143,46 @@
         .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
         
         .skill-tag {
             background-color: #eef5fa;
             color: #2a5674;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 13px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
             display: inline-block;
         }
         
         .job-period {
             float: right;
             font-style: italic;
-            font-size: 13px;
+            font-size: 12px;
             color: #666;
+        }
+        
+        .certifications-section .content-list li {
+            margin-bottom: 4px;
         }
         
         @media print {
             body {
                 background-color: white;
+                margin: 0;
+                padding: 0;
             }
             
             .resume-container {
                 box-shadow: none;
                 margin: 0;
+                max-height: 11in;
+                overflow: hidden;
+            }
+            
+            @page {
+                margin: 0;
+                size: letter;
             }
         }
     </style>
@@ -175,7 +191,7 @@
     <div class="resume-container">
         <div class="header">
             <div class="profile-img-container">
-                <img src="medium-shot-smiley-woman-with-flower.jpg" alt="Aqsa Abbasi" class="profile-img">
+                <img src="/api/placeholder/120/120" alt="Aqsa Abbasi" class="profile-img">
             </div>
             <div class="header-info">
                 <h1 class="name">Aqsa Abbasi</h1>
@@ -185,7 +201,7 @@
                         <i>✉</i> aqsaabbasi2690@gmail.com
                     </a>
                     <a href="tel:+923414363240" class="contact-item">
-                        <i>📱</i> +92 341-4363240
+                        <i>📱</i> +923414363240
                     </a>
                     <a href="https://www.linkedin.com/in/aqsa-abbasi-61b01b309" class="contact-item">
                         <i>🔗</i> LinkedIn
@@ -206,11 +222,11 @@
                 <div class="section">
                     <div class="section-header">Projects</div>
                     <ul class="content-list">
-                        <li><strong>Employee Management System</strong> - React-based EMS app to manage employee records. Features include adding, updating, deleting, and viewing employees in a user-friendly UI.</li>
-                        <li><strong>Personal Portfolio</strong> - Showcases skills, projects, and achievements using HTML, CSS, and JavaScript.</li>
-                        <li><strong>SkyWings</strong> - Fully responsive aviation-themed website built with HTML, CSS, and JavaScript.</li>
-                        <li><strong>IceWorld</strong> - A visually appealing website for an icecream brand using modern frontend technologies.</li>
-                        <li><strong>Porsche</strong> - Fully responsive website for Porsche watches using HTML, CSS, and JavaScript.</li>
+                        <li><strong>Employee Management System</strong> - React-based EMS app for managing employee records with CRUD operations.</li>
+                        <li><strong>Personal Portfolio</strong> - Showcases skills and projects using HTML, CSS, and JavaScript.</li>
+                        <li><strong>SkyWings</strong> - Responsive aviation-themed website built with HTML, CSS, and JavaScript.</li>
+                        <li><strong>IceWorld</strong> - Visual website for an icecream brand using modern frontend technologies.</li>
+                        <li><strong>Porsche</strong> - Responsive website for Porsche watches using HTML, CSS, and JavaScript.</li>
                     </ul>
                 </div>
 
@@ -231,7 +247,7 @@
                 </div>
             </div>
 
-            <div class="section">
+            <div class="section certifications-section">
                 <div class="section-header">Certifications</div>
                 <ul class="content-list">
                     <li>Frontend Web Development HTML5 CSS3 JavaScript and Bootstrap <span class="job-period">Mar 2025</span></li>
